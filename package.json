@@ -106,6 +106,11 @@
 						"default": "Editing a {LANG} file",
 						"description": "Custom string for the largeImageText section of the rich presence.\n\t- '{lang}' will be replaced with the lowercased language ID\n\t- '{LANG}' will be replaced with the uppercased language ID"
 					},
+					"discord.removeSmallImage": {
+						"type": "boolean",
+						"default": false,
+						"description": "Remove the small image"
+					},
 					"discord.smallImage": {
 						"type": "string",
 						"default": "{app_name}",
@@ -196,10 +201,12 @@
 		"@types/vscode": "^1.67.0",
 		"@typescript-eslint/eslint-plugin": "^5.27.1",
 		"@typescript-eslint/parser": "^5.27.1",
+		"@vscode/vsce": "^2.18.0",
 		"clean-webpack-plugin": "^4.0.0",
 		"eslint": "^8.17.0",
 		"eslint-config-marine": "^9.4.1",
 		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-import": "^2.27.5",
 		"prettier": "^2.6.2",
 		"terser-webpack-plugin": "^5.3.3",
 		"ts-loader": "^9.3.0",
@@ -209,6 +216,6 @@
 		"webpack-cli": "^4.9.2"
 	},
 	"engines": {
-		"vscode": "^1.63.1"
+		"vscode": "^1.67.0"
 	}
 }
