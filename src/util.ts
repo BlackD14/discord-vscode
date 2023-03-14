@@ -26,6 +26,7 @@ type WorkspaceExtensionConfiguration = WorkspaceConfiguration & {
 	removeLowerDetails: boolean;
 	removeTimestamp: boolean;
 	removeRemoteRepository: boolean;
+	removeSmallImage: boolean;
 	idleTimeout: number;
 };
 

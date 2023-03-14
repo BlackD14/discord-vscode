@@ -171,6 +171,7 @@ export async function activity(previous: ActivityPayload = {}) {
 	const removeDetails = config[CONFIG_KEYS.RemoveDetails];
 	const removeLowerDetails = config[CONFIG_KEYS.RemoveLowerDetails];
 	const removeRemoteRepository = config[CONFIG_KEYS.RemoveRemoteRepository];
+	const removeSmallImage = config[CONFIG_KEYS.RemoveSmallImage];
 
 	const git = await getGit();
 
@@ -192,6 +193,16 @@ export async function activity(previous: ActivityPayload = {}) {
 			largeImageText: defaultSmallImageText,
 			smallImageKey: IDLE_IMAGE_KEY,
 			smallImageText: defaultLargeImageText,
+		};
+	}
+
+	if (removeSmallImage) {
+		state = {
+			...state,
+			largeImageKey: IDLE_IMAGE_KEY,
+			largeImageText: defaultLargeImageText,
+			smallImageKey: undefined,
+			smallImageText: undefined,
 		};
 	}
 
